@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #signup{
+            width: 400px;
+            border: 1px solid black;
+            background-color: rgb(255, 255, 255);
+            margin: auto;
+        }
+        i{
+            color: #f39;
+            margin-left: 5%;
+            margin-top: 20px;
+        }
+        #heading{
+            width: 50%;
+            text-align: center;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .full-length{
+            display: block;
+            width: 90%;
+            height: 40px;
+            border: 1px solid black;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        label{
+            color: gray;
+            line-height: 30px;
+            margin-left: 5%;
+        }
+        #user_name,#gender{
+            height: 95%;
+            border: none;
+        }
+        #gender{
+            width: 20%;
+        }
+        #name{
+            display: flex;
+        }
+        #user_name{
+            width: 80%;
+        }
+        #submit{
+            background-color: #f39;
+            color: #fff;
+            font-size: larger;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="signup">
+        <i class="fa-solid fa-chevron-left"></i>
+        <h1 id="heading">CREATE ACCOUNT</h1>
+        <label for="name">Name</label>
+        <div class="full-length" id="name">
+            <select name="" id="gender">
+                <option value="#">Select</option>
+                <option value="MR">Mr</option>
+                <option value="Ms">Ms</option>
+            </select>
+            <input type="text" id="user_name">
+        </div>
+        <label for="user_email">Email</label>
+        <input class="full-length" required type="email" id="user_email">
+        <label for="user_password">Password</label>
+        <input class="full-length" required type="password" id="user_password">
+        <label for="user_number">Phone Number</label>
+        <input class="full-length" required type="number" id="user_number">
+        <button class="full-length" id="submit">Continue</button>
+    </div>
+</body>
+</html>
+<script src="https://kit.fontawesome.com/266a9d5dc8.js" crossorigin="anonymous"></script>
+<script>
+  let submit_btn= document.getElementById("submit")
+  submit_btn.addEventListener("click",func)
+
+  function func(){
+    let user={
+        name: document.getElementById("user_name").value,
+        email: document.getElementById("user_email").vlaue,
+        password: document.getElementById("user_password").value,
+        mobile: document.getElementById("user_number").value,
+    }
+
+    localStorage.setItem("userDetail",JSON.stringify(user));
+    window.location.reload();
+  }
+</script>
