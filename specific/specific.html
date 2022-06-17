@@ -16,7 +16,7 @@
             height: 100%;
         }
         #cont{
-            border: 1px solid red;
+            /* border: 1px solid red; */
             width: 90%;
             display: flex;
             margin: auto;
@@ -36,7 +36,7 @@
     height: 500px;
 }
 #right_side{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     padding: 10px;
     width: 40%;
 
@@ -79,7 +79,7 @@
 #color_div{
     width: 100%;
 height: 120px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: grid;
     grid-template-columns: repeat(7,8%);
     grid-template-rows: repeat(4,40px);
@@ -87,11 +87,12 @@ height: 120px;
     overflow: scroll;
 }
 #color_div>div{
-    border: 2px solid red;
+    /* border: 2px solid red; */
 
 }
 #add_tobag{
     background-color: rgb(255, 17, 57);
+    border: none;
     width: 100%;
     height: 50px;
     color: white;
@@ -100,7 +101,7 @@ height: 120px;
     margin-top: 30px;
 }
 #shareFav{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-top: 20px;
     display: flex;
     height: 100px;
@@ -120,6 +121,7 @@ gap: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 #fav{
     border: 1px solid rgb(255, 17, 57);
@@ -133,6 +135,7 @@ gap: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 #return{
     height: 80px;
@@ -169,7 +172,7 @@ gap: 10px;
    cursor: pointer;
 }
 #second_cont{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
     height: 400px;
     margin-top: 20px;
@@ -182,14 +185,14 @@ gap: 10px;
     justify-content: center;
 }
 #details_div{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 80%;
 height: 70%;
 background-color: white;
 overflow: scroll;
 }
 #button_div{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 80%;
     display: flex;
 gap: 20px;
@@ -198,8 +201,8 @@ gap: 20px;
     padding: 10px;
     background-color: black;
     color: white;
-    font-weight: bold
-    ;
+    font-weight: bold;
+    border: none;
 }
 
 #next_product{
@@ -210,8 +213,12 @@ gap: 20px;
     margin-top: 50px;
 }
 #next_product>div{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     text-align:center;
+}
+#next_product>div:hover{
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 #next_product>div>img{
     width: 100%;
@@ -231,13 +238,13 @@ gap: 20px;
         <img src="https://cdn04.nnnow.com/web-images/thumbnail/styles/CIXXXLKX530/1586177010533/1.jpg" alt="">
        
     </div>
-    <div><img onclick="done()" src="https://cdn.shopify.com/s/files/1/0637/6147/products/Eye_Pods_Rendez_Vous_Hero_2400.jpg?v=1632084083" alt=""></div>
+    <div><img  src="https://cdn.shopify.com/s/files/1/0637/6147/products/Eye_Pods_Rendez_Vous_Hero_2400.jpg?v=1632084083" alt=""></div>
     <div><img src="https://cdn04.nnnow.com/web-images/thumbnail/styles/CIXXXLKX530/1586177010533/1.jpg" alt=""></div>
 </div>
 <div id="middle">
     <!-- <img src="https://cdn04.nnnow.com/web-images/large/styles/CIXXXLKX530/1586177010533/1.jpg" alt=""> -->
 
-    <img src="./small.jpg" data-zoom-image="./big1.jpg" id="zoom"> 
+    <img src="" data-zoom-image="https://cdn04.nnnow.com/web-images/large/styles/CIXXXLKX530/1586177010533/1.jpg" id="zoom"> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/elevatezoom/2.2.3/jquery.elevatezoom.min.js "></script>
 
     <script>
@@ -247,13 +254,13 @@ gap: 20px;
 </div>
 <div id="right_side">
 
-    <h2 id="title">BOBBI BROWN</h2>
-    <p id="discription">Skin Long-Wear Weightless Foundation SPF 15 - W-036 Warm Sand</p>
-    <h2 id="price">Rs. 4,300</h2>
+    <h2 id="title"></h2>
+    <p id="discription"></p>
+    <h2 id="price"></h2>
     <br>
     <br>
     <h3 id="size">SIZE:</h3>
-    <span id="product_size">30 ML</span>
+    <span id="product_size"></span>
     <div id="imp_note">
         <span class="material-symbols-outlined">
             error
@@ -288,12 +295,12 @@ gap: 20px;
     </div>
 
 
-    <button id="add_tobag">ADD TO BAG</button>
+    <button id="add_tobag" onclick="addToBagFun()">ADD TO BAG</button>
     <div id="shareFav">
-        <span id="fav" class="material-symbols-outlined">
+        <span  id="fav" onclick="favFun()" class="material-symbols-outlined">
             favorite
             </span>
-        <span id="share" class="material-symbols-outlined">
+        <span id="share" onclick="shareFun()" class="material-symbols-outlined">
             share
             </span>
     </div>
@@ -373,6 +380,33 @@ gap: 20px;
 </html>
 <script>
 
+    let product_data={
+img_url:`https://cdn04.nnnow.com/web-images/large/styles/CIXXXLKX530/1586177010533/1.jpg`,
+brand:`BOBBI BROWN`,
+title:"Skin Long-Wear Weightless Foundation SPF 15 - W-036 Warm Sand",
+price:"RS . 4300",
+size:"30 ML"
+    }
+  
+   append(product_data)
+    function append(data){
+        let main_img=document.getElementById("zoom")
+        let brand=document.getElementById("title")
+        let title=document.getElementById("discription")
+        let size=document.getElementById("product_size")
+        let price = document.getElementById("price")
+    zoom.src=data.img_url
+    brand.innerText=data.brand
+    title.innerText=data.title
+    price.innerText=data.price
+    size.innerText=data.size
+
+    }
+
+
+
+
+    ///////pin validation
 function pinvalidation()
 {
 let input=document.getElementById("pininput").value
@@ -397,7 +431,9 @@ let img=document.createElement('img')
  
 
 
-  //https://raw.githubusercontent.com/Codelessly/FlutterLoadingGIFs/master/packages/cupertino_activity_indicator.gif
+  
+
+
 
     setTimeout(function(){
         h3.innerText="✔ Delivery within 5-7 days"
@@ -414,37 +450,11 @@ let img=document.createElement('img')
 
 
 
-async function getdata(){
-    let url=`https://sephoramasaiapi.herokuapp.com/mackupp`
-    let res=await fetch(url)
-    let data=await res.json()
-    console.log(data)
-append(data)
-}
-getdata()
-
-function append(data){
-//  data.forEach((ele)=>{
-
-  
-
-  
-//         let main_img=document.getElementById("zoom")
-// main_img.src=data.image_url
 
 
 
 
 
-//  })
-
-}
-
-function done(hel){
-    console.log()
-    let main_img=document.getElementById("zoom")
-    // main_img.src=
-}
 
 
 
@@ -517,6 +527,25 @@ function button4(){
     btn3.style.color='white'
     details.innerText="This item can’t be returned — our Returns Policy doesn’t cover innerwear, lingerie, fragrances and beauty products."
     
+}
+
+
+///////////////////////////bag fav share
+
+
+
+function addToBagFun()
+{
+    alert("item added to cart")
+    localStorage.setItem("cart",JSON.stringify(product_data))
+}
+function favFun()
+{
+    alert("item added to wishlist")
+}
+function shareFun()
+{
+    alert("share complete")
 }
 
 </script>
