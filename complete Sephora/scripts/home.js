@@ -78,7 +78,7 @@ img1arr.forEach((el)=>{
 
 
 
-let url=`http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline`
+let url=`https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline`
 
 let slide2=async()=>{
     try {

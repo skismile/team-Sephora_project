@@ -1,4 +1,4 @@
-const url="http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline"
+const url="https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline"
   async function getdata(){
     try{
         let res=await fetch(url);
