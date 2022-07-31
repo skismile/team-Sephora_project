@@ -91,7 +91,7 @@ we really enjoyed this whole part of developing and had a learing experience and
 ### Team Members
 
 - **[Dhruv Gupta]**
- - **[SK Smile]**
+ - **[SK Ismile]**
 - **[Mitresh]**
 - **[ranjit Das]**
 - **[Himanshu Singh]**
