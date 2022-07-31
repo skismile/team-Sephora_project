@@ -21,7 +21,7 @@ Sephora is a French multinational retailer of famous beauty brand that has captu
 company is also expanding around the globe and is available in several countries. The brand offers different beauty products from high-end beauty
 brands and makes them accessible to users even before purchasing.
 
-
+---
 
 ### Netlify Link
  
@@ -70,24 +70,23 @@ can Signup and Login to buy the courses.
 
 ---
 
-
-
+------
 
 ### Netlify Link
 
 https://cloneshephora.netlify.app
- ------
- <h1>WEBSITE USER FLOW ></h1>
- ----
+------
+ 
+<h1>WEBSITE USER FLOW ></h1>
+
 the user flow that we tried to maintain is,
 <br/>
 home -> login/signup -> dashboard -> get started to products -> create user Id-> Enter email details -> 
 choose products -> Product detail page-> -> Products Check out page ->payment status -> order placed -> track status.
- 
-----
+
  <h1>TEAM MEMBERS AND MESSAGE></h1>
 we really enjoyed this whole part of developing and had a learing experience and have given our best efforts to bring the BEST thing as POSSIBLE.
-
+---
 ### Team Members
 
 - **[Dhruv Gupta]**
