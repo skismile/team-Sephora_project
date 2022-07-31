@@ -86,7 +86,7 @@ choose products -> Product detail page-> -> Products Check out page ->payment st
 
  <h1>TEAM MEMBERS AND MESSAGE></h1>
 we really enjoyed this whole part of developing and had a learing experience and have given our best efforts to bring the BEST thing as POSSIBLE.
----
+
 ### Team Members
 
 - **[Dhruv Gupta]**
