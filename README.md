@@ -1,12 +1,12 @@
 ###  lookalike of website <span>Sephora Clone<span>
 
  <h2>Welcome to this repo</h2>
- We are team of 6 members (  Dhruv Gupta,SK Ismile, Mitresh, Ranjit Das, Rajnikant Arya, Himanshu Singh) has completed the task in 5 days and Given our 
+ We are team of 6 members ( Dhruv Gupta, SK Ismile, Mitresh, Ranjit Das, Rajnikant Arya, Himanshu Singh ) has completed the task in 5 days and Given our 
  best efforts to Construct this project.
 In case of any suggestion and query feel free to connect us.
  
  <h1>TOOLS AND TECHNOLOGY USED ></h1>
-  <li>HTML (through React)</li>
+  <li>HTML</li>
   <li>css</li>
 <li>javascript</li>  
 <li>font Awesom icons</li>
@@ -80,7 +80,7 @@ https://cloneshephora.netlify.app
  <h1>WEBSITE USER FLOW ></h1>
  ----
 the user flow that we tried to maintain is,
-
+<br/>
 home -> login/signup -> dashboard -> get started to products -> create user Id-> Enter email details -> 
 choose products -> Product detail page-> -> Products Check out page ->payment status -> order placed -> track status.
  
@@ -91,13 +91,11 @@ we really enjoyed this whole part of developing and had a learing experience and
 ### Team Members
 
 - **[Dhruv Gupta]**
- - **[SK Ismile]**
+- **[SK Ismile]**
 - **[Mitresh]**
 - **[ranjit Das]**
 - **[Himanshu Singh]**
 - **[Rajnikant Arya]**
 
-
 ---
 
----
