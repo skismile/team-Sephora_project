@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="./ranajit'sCss/commonCategory.css">
-    <link rel="stylesheet" href="./ranajit'sCss/footer.css">
+    <link rel="stylesheet" href="./ranajit'sCss/navbar-rj.css">
+    <link rel="stylesheet" href="./ranajit'sCss/footer.css"> 
     <title>fragrance</title>
    
    
 </head>
 <body>
     
-    <div id="navbar"></div>
+    <div id="navbar_div"></div>
     <div id="total">
         <div id="afternav_sephora">
             <div><a href="index.html">SEPHORA</a></div> <!-- check here -->
@@ -136,94 +137,18 @@
   
 </body>
 </html>
-<script src="https://kit.fontawesome.com/266a9d5dc8.js" crossorigin="anonymous"></script>
-<!-- JavaScript Bundle with Popper -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
-<script>
-    let createElement=(x)=>{
-        return document.createElement("x");
-    }
 
-
-    function loginfunc(){
-        let popup=document.getElementById("login-form");
-        popup.classList.add("login-form-popup");
-    }
-
-    // makeup dropdown func 
- function makeup_d(){
-    let cont=document.getElementById("makeup_dropdown");
-    cont.style.display="block";
-  }
-  function makeup_dl(){
-    let cont=document.getElementById("makeup_dropdown");
-    cont.style.display="none";
-  }
-
-//   skincare dropdown func 
-  function skincare_d(){
-    let cont=document.getElementById("skincare_dropdown");
-    cont.style.display="block";
-    cont.style.margin="auto";
-  }
-  function skincare_dl(){
-    let cont=document.getElementById("skincare_dropdown");
-    cont.style.display="none";
-  }
-
-//   fragrance dropdownfunc 
-function fragrance_d(){
-    let cont=document.getElementById("fragrance_dropdown");
-    cont.style.display="block";
-    cont.style.margin="auto";
-  }
-  function fragrance_dl(){
-    let cont=document.getElementById("fragrance_dropdown");
-    cont.style.display="none";
-  }
-
-
-// haircare dropdown func 
-function haircare_d(){
-    let cont=document.getElementById("haircare_dropdown");
-    cont.style.display="block";
-    cont.style.margin="auto";
-  }
-  function haircare_dl(){
-    let cont=document.getElementById("haircare_dropdown");
-    cont.style.display="none";
-  }
-
-// brushes dropdown func 
-function brushes_d(){
-    let cont=document.getElementById("brushes_dropdown");
-    cont.style.display="block";
-    cont.style.margin="auto";
-  }
-  function brushes_dl(){
-    let cont=document.getElementById("brushes_dropdown");
-    cont.style.display="none";
-  }
-
-
-  let openForm=()=>{
-        let openloginform=document.getElementById("login-form");
-        openloginform.style.display="block";
-
-    }
-
-    
-    function closeForm (){
-        let loginform=document.getElementById("login-form")
-        loginform.style.display="none";
-        // window.location.href="index.html";
-    }
-</script>
 <script src="./ranajit'sScripts/nav_skincare.js" type="module" >
     // import {footer} from "./ranajit'sScripts/footer.js";
     // // document.getElementById("navbar").innerHTML=navbar();
 </script>
 <script type="module">
-    import {footer} from "/ranajit'sScripts/footer.js";
+    import {footer} from "./ranajit'sScripts/footer.js";
     document.getElementById("footer").innerHTML=footer()
 </script>
+<script src="https://kit.fontawesome.com/0bbdfe8930.js" crossorigin="anonymous"></script>
+<script type="module">
+    import {navbar} from "../NavCode/component.js";
+    document.getElementById("navbar_div").innerHTML=navbar()
+</script>
+<script src="./ranajit'sScripts/navbarScript.js"></script>

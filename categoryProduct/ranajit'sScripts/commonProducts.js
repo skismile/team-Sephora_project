@@ -1,4 +1,4 @@
-const url="http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline"
+const url="https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline"
   async function getdata(){
     try{
         let res=await fetch(url);
@@ -46,8 +46,15 @@ function append(data){
         //console.log(ele.price)
         let div=document.createElement("div");
         div.setAttribute("class","eachdiv")
+        div.id="card";
+        div.addEventListener("click",function(){
+            redi(ele);
+        })
         let img=document.createElement("img")
         img.src=ele.image_link;
+
+        
+
 
         let offerdiv=document.createElement("div");
         offerdiv.setAttribute("class","offerdiv");
@@ -145,4 +152,11 @@ function subscribe(){
 //back to top 
 function backtotop(){
     console.log("clicked btn")
+   window.location.href="makeup_products.html"
 }
+
+function redi(el){
+    localStorage.setItem("specific",JSON.stringify(el));
+    window.location.href="./specific.html"
+}
+

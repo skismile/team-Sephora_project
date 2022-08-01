@@ -1,5 +1,6 @@
 let sld1=document.querySelector("#slide1");
 
+
 let sldData1=[
     "https://logan.nnnow.com/content/dam/nnnow-project/18-may-2022/SC_TopBanner_NewAtSephoraDesktop.jpg",
  "https://logan.nnnow.com/content/dam/nnnow-project/16-may-2022/1125x500-D.jpg",

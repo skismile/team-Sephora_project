@@ -60,32 +60,31 @@ function brushes_d(){
 
     }
 
-// login form closed 
     function closeForm (){
         let loginform=document.getElementById("login-form")
         loginform.style.display="none";
-        // window.location.href="index.html";
     }
-// login submit 
+
+
     let login_submit=()=>{
-        let loginid=document.getElementById("login_input").value;
+      let loginid=document.getElementById("login_input").value;
 
-        let data=JSON.parse(localStorage.getItem("signupData"))
-        
+      let data=JSON.parse(localStorage.getItem("signupData")) || [];
+     
 
-        if(loginid === data.email || loginid === data.mobile){
-            localStorage.setItem("login_info",JSON.stringify(loginid));
+      if(loginid === data.email || loginid === data.mobile){
+          localStorage.setItem("login_info",JSON.stringify(loginid));
 
-            alert("Login Sucessfull");
-            closeForm();
-            window.location.href="index.html";
-        }
-        else{
-            closeForm();
-            openSignup();
-        }
-      
-    }
+          alert("Login Sucessfull");
+          closeForm();
+          window.location.href="../home/index.html";
+      }
+      else{
+          closeForm();
+          openSignup();
+      }
+    
+  }
 
 
 // signup form popup 
@@ -100,11 +99,9 @@ function brushes_d(){
 
     }
     
-   let submit_btn= document.getElementById("submit")
-  submit_btn.addEventListener("click",func)
 
   function func(){
-    // let userdetail= [];
+    // let userdetail= JSON.parse(localStorage.getItem("signupData")) || [];
     let userSignup={
         name: document.getElementById("user_name").value,
         email: document.getElementById("user_email").value,
@@ -112,9 +109,13 @@ function brushes_d(){
         mobile: document.getElementById("user_number").value,
     }
 
-    // console.log(userSignup);
+    console.log(userSignup);
+   
     // userdetail.push(userSignup);
     localStorage.setItem("signupData",JSON.stringify(userSignup));
+    let userName=document.getElementById("login");
+    userName.innerText=userSignup.name;
+    userName.style.fontWeight="600";
     closeSignup();
     // window.location.reload();
 
@@ -125,3 +126,11 @@ function brushes_d(){
     window.location.href="index.html";
     openForm();
   }
+
+
+
+  
+    let mca=JSON.parse(localStorage.getItem("signupData")) || [];
+   console.log(mca.name)
+    let naam=document.querySelector(".fgh");    
+      naam.innerHTML=mca.name||"Login";

@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="./ranajit'sCss/commonCategory.css">
+    <link rel="stylesheet" href="./ranajit'sCss/navbar-rj.css">
     <link rel="stylesheet" href="./ranajit'sCss/footer.css">
-    <!-- <link rel="stylesheet" href="navbar.css"> -->
     <title>makeup</title>
 </head>
 <body>
-    <div id="navbar"><h1>add navbar part</h1></div>
+    <div id="navbar_div"></div>
     <div id="total">
         <div id="afternav_sephora">
             <div><a href="index.html">SEPHORA</a></div> <!-- check here -->
@@ -135,8 +136,14 @@
     // import {footer} from "./ranajit'sScripts/footer.js";
     // // document.getElementById("navbar").innerHTML=navbar();
 </script>
+
 <script type="module">
-    import {footer} from "/ranajit'sScripts/footer.js"
-    console.log(footer())
+    import {footer} from "./ranajit'sScripts/footer.js";
     document.getElementById("footer").innerHTML=footer()
 </script>
+<script src="https://kit.fontawesome.com/0bbdfe8930.js" crossorigin="anonymous"></script>
+<script type="module">
+    import {navbar} from "../NavCode/component.js";
+    document.getElementById("navbar_div").innerHTML=navbar()
+</script>
+<script src="./ranajit'sScripts/navbarScript.js"></script>

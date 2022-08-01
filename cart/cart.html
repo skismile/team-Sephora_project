@@ -344,6 +344,11 @@
         modal.style.display = "none";
       }
     }
+  
+    var qpro1 = JSON.parse(localStorage.getItem("product"))||[]
+    var qpro2 = JSON.parse(localStorage.getItem("signupData"))||[]
+
+    console.log(qpro2)
   function checkout(){
 
     if (address.length==0)
@@ -352,6 +357,13 @@
       document.getElementById('id01').style.display='block'
 
 
+    }else if(qpro1.length==0){
+      alert('please add product')
+      window.location.href="../index.html"
+    }
+    else if(qpro2.length==0||qpro2==null){
+      alert('please login')
+      window.location.href="../index.html"
     }
     else{
       window.location.href="../payment/payment.html"
