@@ -3,7 +3,7 @@ const url="https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybellin
     try{
         let res=await fetch(url);
         let data=await res.json()
-    //console.log(data)
+    console.log(data)
     //append(data)
 
     function sortfunc(){

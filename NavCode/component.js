@@ -84,7 +84,7 @@ let navbar=()=>{
                     <a href="../cart/cart.html"><i class="fa-solid fa-cart-arrow-down"></i></a>
                         </div>
                    <div><span class="v-bar">|</span> <i  onclick="openForm()" class="fa-regular fa-user"></i>
-                    <span onclick="openForm()" class="fgh" id="login">Login</span></div>
+                    <span onclick="openForm()"  id="login">Login</span></div>
                 </div>
             </div>
         </div>

@@ -114,7 +114,9 @@ function brushes_d(){
     // userdetail.push(userSignup);
     localStorage.setItem("signupData",JSON.stringify(userSignup));
     let userName=document.getElementById("login");
-    userName.innerText=userSignup.name;
+    let mca=JSON.parse(localStorage.getItem("signupData")) || [];
+    console.log(mca.name)
+    userName.innerText=mca.name||"Login";
     userName.style.fontWeight="600";
     closeSignup();
     // window.location.reload();
@@ -130,7 +132,5 @@ function brushes_d(){
 
 
   
-    let mca=JSON.parse(localStorage.getItem("signupData")) || [];
-   console.log(mca.name)
-    let naam=document.querySelector(".fgh");    
-      naam.innerHTML=mca.name||"Login";
+    
+   
