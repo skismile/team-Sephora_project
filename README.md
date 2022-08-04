@@ -92,7 +92,7 @@ we really enjoyed this whole part of developing and had a learing experience and
 - **[Dhruv Gupta]**
 - **[SK Ismile]**
 - **[Mitresh]**
-- **[ranjit Das]**
+- **[Ranajit Das]**
 - **[Himanshu Singh]**
 - **[Rajnikant Arya]**
 
