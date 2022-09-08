@@ -98,3 +98,4 @@ we really enjoyed this whole part of developing and had a learing experience and
 
 ---
 
+- Promocode -> MASAI30 AND MASAI40
