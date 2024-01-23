@@ -10,9 +10,9 @@ let container6=document.getElementById("add-product-div6")
 
 async function getData(url){
     try{
-        let res=await fetch(url)
+        let res=await fetch("https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline")
         let data=await res.json()
-        //console.log(data)
+        console.log(data);
         return data;
         
     }catch(err){
@@ -28,7 +28,7 @@ function appendFunc(data,container,j){
        while(count<4){
             let div=document.createElement("div")
             let img=document.createElement("img")
-            img.src=data[j].image_url;
+            img.src=data[j].api_featured_image;
 
             let offerdiv=document.createElement("div");
             offerdiv.setAttribute("class","offerdiv");
@@ -42,10 +42,10 @@ function appendFunc(data,container,j){
 
             let brandname=document.createElement("p")
             brandname.setAttribute("class","brandname")
-            brandname.innerText=data[j].brandname;
+            brandname.innerText=data[j].brand;
             let productName=document.createElement("p")
             productName.setAttribute("class","productname")
-            productName.innerText=data[j].productName;
+            productName.innerText=data[j].name;
             let price=document.createElement("p")
             price.setAttribute("class","productdivprice")
             price.innerText=`Rs.${data[j].price}`;
